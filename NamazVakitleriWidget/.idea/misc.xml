@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/ATASEVER/Documents/GitHub/Namaz-Vakitleri-Widget/NamazVakitleriWidget/app/src/main/res/layout/activity_ayet.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ATASEVER/StudioProjects/Namaz-Vakitleri-Widget/NamazVakitleriWidget/app/src/main/res/layout/activity_ayet.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ATASEVER/StudioProjects/NamazVakitleriWidget/app/src/main/res/drawable-v21/app_widget_background.xml" value="0.2703125" />
+        <entry key="..\:/Users/ATASEVER/StudioProjects/NamazVakitleriWidget/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2703125" />
+        <entry key="..\:/Users/ATASEVER/StudioProjects/NamazVakitleriWidget/app/src/main/res/drawable/aksam_bg.xml" value="0.16" />
+        <entry key="..\:/Users/ATASEVER/StudioProjects/NamazVakitleriWidget/app/src/main/res/drawable/banner_bg.xml" value="0.2703125" />
+        <entry key="..\:/Users/ATASEVER/StudioProjects/NamazVakitleriWidget/app/src/main/res/drawable/banner_bg_lacivert.xml" value="0.1" />
+        <entry key="..\:/Users/ATASEVER/StudioProjects/NamazVakitleriWidget/app/src/main/res/drawable/banner_bg_lacivert_duz.xml" value="0.165" />
+        <entry key="..\:/Users/ATASEVER/StudioProjects/NamazVakitleriWidget/app/src/main/res/drawable/banner_bg_sub.xml" value="0.2703125" />
+        <entry key="..\:/Users/ATASEVER/StudioProjects/NamazVakitleriWidget/app/src/main/res/drawable/duz_kenar_bg.xml" value="0.2703125" />
+        <entry key="..\:/Users/ATASEVER/StudioProjects/NamazVakitleriWidget/app/src/main/res/drawable/footer_bg.xml" value="0.16" />
+        <entry key="..\:/Users/ATASEVER/StudioProjects/NamazVakitleriWidget/app/src/main/res/drawable/footer_duz_bg.xml" value="0.16" />
+        <entry key="..\:/Users/ATASEVER/StudioProjects/NamazVakitleriWidget/app/src/main/res/drawable/gunes_bg.xml" value="0.16" />
+        <entry key="..\:/Users/ATASEVER/StudioProjects/NamazVakitleriWidget/app/src/main/res/drawable/ic_baseline_autorenew_24.xml" value="0.2703125" />
+        <entry key="..\:/Users/ATASEVER/StudioProjects/NamazVakitleriWidget/app/src/main/res/drawable/ic_baseline_bedtime_24.xml" value="0.2703125" />
+        <entry key="..\:/Users/ATASEVER/StudioProjects/NamazVakitleriWidget/app/src/main/res/drawable/ic_baseline_brightness_1_24.xml" value="0.2703125" />
+        <entry key="..\:/Users/ATASEVER/StudioProjects/NamazVakitleriWidget/app/src/main/res/drawable/ic_baseline_content_copy_24.xml" value="0.1" />
+        <entry key="..\:/Users/ATASEVER/StudioProjects/NamazVakitleriWidget/app/src/main/res/drawable/ic_baseline_menu_book_24.xml" value="0.1" />
+        <entry key="..\:/Users/ATASEVER/StudioProjects/NamazVakitleriWidget/app/src/main/res/drawable/ic_baseline_nights_stay_24.xml" value="0.2703125" />
+        <entry key="..\:/Users/ATASEVER/StudioProjects/NamazVakitleriWidget/app/src/main/res/drawable/ic_baseline_nights_stay_24_r.xml" value="0.2703125" />
+        <entry key="..\:/Users/ATASEVER/StudioProjects/NamazVakitleriWidget/app/src/main/res/drawable/ic_baseline_share_19.xml" value="0.2703125" />
+        <entry key="..\:/Users/ATASEVER/StudioProjects/NamazVakitleriWidget/app/src/main/res/drawable/ic_baseline_wb_sunny_24.xml" value="0.2703125" />
+        <entry key="..\:/Users/ATASEVER/StudioProjects/NamazVakitleriWidget/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2703125" />
+        <entry key="..\:/Users/ATASEVER/StudioProjects/NamazVakitleriWidget/app/src/main/res/drawable/ikindi_bg.xml" value="0.16" />
+        <entry key="..\:/Users/ATASEVER/StudioProjects/NamazVakitleriWidget/app/src/main/res/drawable/imsak_bg.xml" value="0.16" />
+        <entry key="..\:/Users/ATASEVER/StudioProjects/NamazVakitleriWidget/app/src/main/res/drawable/ogle_bg.xml" value="0.16" />
+        <entry key="..\:/Users/ATASEVER/StudioProjects/NamazVakitleriWidget/app/src/main/res/drawable/ovalbuton.xml" value="0.2703125" />
+        <entry key="..\:/Users/ATASEVER/StudioProjects/NamazVakitleriWidget/app/src/main/res/drawable/ovalkenar.xml" value="0.2703125" />
+        <entry key="..\:/Users/ATASEVER/StudioProjects/NamazVakitleriWidget/app/src/main/res/drawable/ovalkenar2.xml" value="0.2703125" />
+        <entry key="..\:/Users/ATASEVER/StudioProjects/NamazVakitleriWidget/app/src/main/res/drawable/ovalkenar_cizgi.xml" value="0.2703125" />
+        <entry key="..\:/Users/ATASEVER/StudioProjects/NamazVakitleriWidget/app/src/main/res/drawable/ovalkenar_seffaf.xml" value="0.142" />
+        <entry key="..\:/Users/ATASEVER/StudioProjects/NamazVakitleriWidget/app/src/main/res/drawable/yatsi_bg.xml" value="0.16" />
+        <entry key="..\:/Users/ATASEVER/StudioProjects/NamazVakitleriWidget/app/src/main/res/layout-w1240dp/content_scrolling.xml" value="0.16331994645247658" />
+        <entry key="..\:/Users/ATASEVER/StudioProjects/NamazVakitleriWidget/app/src/main/res/layout-w936dp/content_scrolling.xml" value="0.17793715846994534" />
+        <entry key="..\:/Users/ATASEVER/StudioProjects/NamazVakitleriWidget/app/src/main/res/layout/activity_ayet.xml" value="0.264" />
+        <entry key="..\:/Users/ATASEVER/StudioProjects/NamazVakitleriWidget/app/src/main/res/layout/activity_imsakiye.xml" value="0.23596014492753623" />
+        <entry key="..\:/Users/ATASEVER/StudioProjects/NamazVakitleriWidget/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/ATASEVER/StudioProjects/NamazVakitleriWidget/app/src/main/res/layout/activity_select_city.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ATASEVER/StudioProjects/NamazVakitleriWidget/app/src/main/res/layout/activity_tabbed.xml" value="0.2513586956521739" />
+        <entry key="..\:/Users/ATASEVER/StudioProjects/NamazVakitleriWidget/app/src/main/res/layout/activity_toplu_vakitler.xml" value="0.264" />
+        <entry key="..\:/Users/ATASEVER/StudioProjects/NamazVakitleriWidget/app/src/main/res/layout/bg_radius.xml" value="0.23143115942028986" />
+        <entry key="..\:/Users/ATASEVER/StudioProjects/NamazVakitleriWidget/app/src/main/res/layout/content_scrolling.xml" value="0.264" />
+        <entry key="..\:/Users/ATASEVER/StudioProjects/NamazVakitleriWidget/app/src/main/res/layout/fragment_tabbed.xml" value="0.24010416666666667" />
+        <entry key="..\:/Users/ATASEVER/StudioProjects/NamazVakitleriWidget/app/src/main/res/layout/new_app_widget.xml" value="0.264" />
+        <entry key="..\:/Users/ATASEVER/StudioProjects/NamazVakitleriWidget/app/src/main/res/layout/new_app_widget2.xml" value="0.23143115942028986" />
+        <entry key="..\:/Users/ATASEVER/StudioProjects/NamazVakitleriWidget/app/src/main/res/layout/ovalkenar.xml" value="0.2164855072463768" />
+        <entry key="..\:/Users/ATASEVER/StudioProjects/NamazVakitleriWidget/app/src/main/res/menu/menu_imsakiye.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ATASEVER/StudioProjects/NamazVakitleriWidget/app/src/main/res/menu/menu_toplu_vakitler.xml" value="0.25416666666666665" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.264" />
+      </ProjectState>
+    </option>
+  </component>
+</project>
