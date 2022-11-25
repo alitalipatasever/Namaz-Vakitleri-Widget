@@ -7,21 +7,23 @@ import android.widget.TextView;
 
 import java.util.Random;
 
-public class Ayet extends AppCompatActivity {
+public class Hadis extends AppCompatActivity {
 
-    TextView txtAyet;
+    TextView txtHadis;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ayet);
+        setContentView(R.layout.activity_hadis);
 
-        txtAyet =(TextView) findViewById(R.id.txtAyet);
+        txtHadis = (TextView) findViewById(R.id.txtHadis);
 
-        String[] arrayAyet = getResources().getStringArray(R.array.ayetler);
-        String randomStrAyet = arrayAyet[new Random().nextInt(arrayAyet.length)];
-        txtAyet.setText(randomStrAyet);
+        String[] arrayHadis = getResources().getStringArray(R.array.hadisler);
+        String randomStrHadis = arrayHadis[new Random().nextInt(arrayHadis.length)];
+        txtHadis.setText(randomStrHadis);
+
     }
+
     @Override
     public void onBackPressed() {
         super.onBackPressed();
