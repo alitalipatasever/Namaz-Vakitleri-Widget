@@ -2,7 +2,10 @@ package com.example.namazvakitleriwidget;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.Random;
@@ -16,6 +19,8 @@ public class Ayet extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ayet);
 
+        navBar();
+
         txtAyet =(TextView) findViewById(R.id.txtAyet);
 
         String[] arrayAyet = getResources().getStringArray(R.array.ayetler);
@@ -26,5 +31,45 @@ public class Ayet extends AppCompatActivity {
     public void onBackPressed() {
         super.onBackPressed();
         overridePendingTransition(R.anim.anim_left_out_reverse, R.anim.anim_right_in_reverse);
+    }
+
+    public void navBar(){
+        LinearLayout lytVakirler = (LinearLayout)findViewById(R.id.lytVakitler);
+        LinearLayout ltyHadis = (LinearLayout) findViewById(R.id.lytHadis);
+        LinearLayout ltyDua = (LinearLayout) findViewById(R.id.lytDua);
+        LinearLayout ltyAyarlar = (LinearLayout)findViewById(R.id.lytAyarlar);
+        lytVakirler.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.anim_left_out_reverse, R.anim.anim_right_in_reverse);
+            }
+        });
+        ltyHadis.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),Hadis.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.anim_right_in, R.anim.anim_left_out);
+            }
+        });
+        ltyDua.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),Dua.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.anim_right_in, R.anim.anim_left_out);
+            }
+        });
+        ltyAyarlar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),Ayarlar.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.anim_right_in, R.anim.anim_left_out);
+            }
+        });
+
     }
 }
