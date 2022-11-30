@@ -27,18 +27,13 @@ public class Ayet extends AppCompatActivity {
         String randomStrAyet = arrayAyet[new Random().nextInt(arrayAyet.length)];
         txtAyet.setText(randomStrAyet);
     }
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        overridePendingTransition(R.anim.anim_left_out_reverse, R.anim.anim_right_in_reverse);
-    }
 
     public void navBar(){
-        LinearLayout lytVakirler = (LinearLayout)findViewById(R.id.lytVakitler);
+        LinearLayout lytVakitler = (LinearLayout)findViewById(R.id.lytVakitler);
         LinearLayout ltyHadis = (LinearLayout) findViewById(R.id.lytHadis);
         LinearLayout ltyDua = (LinearLayout) findViewById(R.id.lytDua);
         LinearLayout ltyAyarlar = (LinearLayout)findViewById(R.id.lytAyarlar);
-        lytVakirler.setOnClickListener(new View.OnClickListener() {
+        lytVakitler.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),MainActivity.class);
@@ -71,5 +66,13 @@ public class Ayet extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.anim_left_out_reverse, R.anim.anim_right_in_reverse);
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(intent);
     }
 }
