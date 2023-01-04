@@ -28,7 +28,11 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
+import java.time.Duration;
+import java.util.Calendar;
+import java.util.Locale;
 import java.util.Timer;
+import java.util.concurrent.TimeUnit;
 
 import pl.droidsonroids.gif.GifImageView;
 
@@ -99,6 +103,7 @@ public class MainActivity extends AppCompatActivity {
 //        imgMoon.setImageBitmap(getBitmap("http://namazvakti.diyanet.gov.tr/images/sd6.gif"));
 
 
+        /*
         new CountDownTimer(500000, 1000) {
             public void onTick(long millisUntilFinished) {
                 // Used for formatting digit to be in 2 digits only
@@ -111,6 +116,191 @@ public class MainActivity extends AppCompatActivity {
             // When the task is over it will print 00:00:00 there
             public void onFinish() {
                 txttimer.setText("00:00:00");
+            }
+        }.start();
+        */
+
+        new CountDownTimer(Long.MAX_VALUE, 1000) {
+            public void onTick(long millisUntilFinished) {
+                // Used for formatting digit to be in 2 digits only
+                /*NumberFormat f = new DecimalFormat("00");
+                long hour = (millisUntilFinished / 3600000) % 24;
+                long min = (millisUntilFinished / 60000) % 60;
+                long sec = (millisUntilFinished / 1000) % 60;
+                txttimer.setText(f.format(hour) + ":" + f.format(min)+ ":" + f.format(sec)); // + ":" + f.format(sec)*/
+                if (!aksam.getText().toString().equals("00:00")) {
+                    /*Calendar calendar = Calendar.getInstance();
+                    int hour24hrs = calendar.get(Calendar.HOUR_OF_DAY);
+                    int hour12hrs = calendar.get(Calendar.HOUR);
+                    int minutes = calendar.get(Calendar.MINUTE);
+                    int seconds = calendar.get(Calendar.SECOND);
+                    System.out.println("Current hour 24hrs format:  " + hour24hrs + ":" + minutes + ":" + seconds);
+                    System.out.println("Current hour 12hrs format:  " + hour12hrs + ":" + minutes + ":" + seconds);
+
+                    String aksams[] = aksam.getText().toString().split(":");
+                    long aksamH = TimeUnit.HOURS.toMillis(Integer.parseInt(aksams[0]));
+                    long aksamM = TimeUnit.MINUTES.toMillis(Integer.parseInt(aksams[1]));
+
+                    long aksamHM = aksamH + aksamM;
+
+                    long currentH = TimeUnit.HOURS.toMillis(hour24hrs);
+                    long currentM = TimeUnit.MINUTES.toMillis(minutes);
+
+                    long currentHM = currentH + currentM;
+
+                    //double difference = (aksamHM - currentHM) / 1e6;
+                    long difference = aksamHM - currentHM;
+
+                    String kalanZaman = String.format(
+                            "%02d:%02d", TimeUnit.MILLISECONDS.toHours(difference),
+                            TimeUnit.MILLISECONDS.toMinutes(difference) - TimeUnit.HOURS.toMinutes(
+                                    TimeUnit.MILLISECONDS.toHours(difference)));
+
+                    txttimer.setText(kalanZaman);*/
+
+
+
+                    Calendar calendar = Calendar.getInstance();
+                    int hour24hrs = calendar.get(Calendar.HOUR_OF_DAY);
+                    int hour12hrs = calendar.get(Calendar.HOUR);
+                    int minutes = calendar.get(Calendar.MINUTE);
+                    int seconds = calendar.get(Calendar.SECOND);
+                    System.out.println("Current hour 24hrs format:  " + hour24hrs + ":" + minutes + ":" + seconds);
+                    System.out.println("Current hour 12hrs format:  " + hour12hrs + ":" + minutes + ":" + seconds);
+
+                    //hour24hrs = 8;
+                    //minutes = 3;
+
+                    String imsaks[] = imsak.getText().toString().split(":");
+                    long imsakH = TimeUnit.HOURS.toMillis(Integer.parseInt(imsaks[0]));
+                    long imsakM = TimeUnit.MINUTES.toMillis(Integer.parseInt(imsaks[1]));
+
+                    String guness[] = gunes.getText().toString().split(":");
+                    long gunesH = TimeUnit.HOURS.toMillis(Integer.parseInt(guness[0]));
+                    long gunesM = TimeUnit.MINUTES.toMillis(Integer.parseInt(guness[1]));
+
+                    String ogles[] = ogle.getText().toString().split(":");
+                    long ogleH = TimeUnit.HOURS.toMillis(Integer.parseInt(ogles[0]));
+                    long ogleM = TimeUnit.MINUTES.toMillis(Integer.parseInt(ogles[1]));
+
+                    String ikindis[] = ikindi.getText().toString().split(":");
+                    long ikindiH = TimeUnit.HOURS.toMillis(Integer.parseInt(ikindis[0]));
+                    long ikindiM = TimeUnit.MINUTES.toMillis(Integer.parseInt(ikindis[1]));
+
+                    String aksams[] = aksam.getText().toString().split(":");
+                    long aksamH = TimeUnit.HOURS.toMillis(Integer.parseInt(aksams[0]));
+                    long aksamM = TimeUnit.MINUTES.toMillis(Integer.parseInt(aksams[1]));
+
+                    String yatsis[] = yatsi.getText().toString().split(":");
+                    long yatsiH = TimeUnit.HOURS.toMillis(Integer.parseInt(yatsis[0]));
+                    long yatsiM = TimeUnit.MINUTES.toMillis(Integer.parseInt(yatsis[1]));
+
+                    String yirmi4s[] = "24:00".split(":");
+                    long yirmi4sH = TimeUnit.HOURS.toMillis(Integer.parseInt(yirmi4s[0]));
+                    long yirmi4sM = TimeUnit.MINUTES.toMillis(Integer.parseInt(yirmi4s[1]));
+
+                    //String altmiss = "60";
+                    //long altmisS = TimeUnit.SECONDS.toMillis(Long.parseLong(altmiss));
+                    int altmisS = 60;
+
+                    long imsakHM = imsakH + imsakM;
+                    long ogleHM = ogleH + ogleM;
+                    long ikindiHM = ikindiH + ikindiM;
+                    long aksamHM = aksamH + aksamM;
+                    long yatsiHM = yatsiH + yatsiM;
+                    long gunesHM = gunesH + gunesM;
+                    long yirmi4sHM = yirmi4sH + yirmi4sM;
+
+                    long currentH = TimeUnit.HOURS.toMillis(hour24hrs);
+                    long currentM = TimeUnit.MINUTES.toMillis(minutes);
+
+                    long currentHM = currentH + currentM;
+
+                    //double difference = (aksamHM - currentHM) / 1e6;
+
+                    int kalanSaniye = altmisS - seconds;
+
+                    if (kalanSaniye == 60) {
+                        kalanSaniye = 0;
+                    }
+
+                    if (currentHM < imsakHM) {
+                        long difference = imsakHM - currentHM;
+
+                        String kalanZaman = String.format(Locale.US,
+                                "%02d:%02d:%02d", TimeUnit.MILLISECONDS.toHours(difference),
+                                TimeUnit.MILLISECONDS.toMinutes(difference) - TimeUnit.HOURS.toMinutes(
+                                        TimeUnit.MILLISECONDS.toHours(difference)), kalanSaniye);
+
+                        txttimer.setText(kalanZaman);
+                    }
+                    else if (currentHM < gunesHM) {
+                        long difference = gunesHM - currentHM;
+
+                        String kalanZaman = String.format(Locale.US,
+                                "%02d:%02d:%02d", TimeUnit.MILLISECONDS.toHours(difference),
+                                TimeUnit.MILLISECONDS.toMinutes(difference) - TimeUnit.HOURS.toMinutes(
+                                        TimeUnit.MILLISECONDS.toHours(difference)), kalanSaniye);
+
+                        txttimer.setText(kalanZaman);
+                    }
+                    else if (currentHM < ogleHM) {
+                        long difference = ogleHM - currentHM;
+
+                        String kalanZaman = String.format(Locale.US,
+                                "%02d:%02d:%02d", TimeUnit.MILLISECONDS.toHours(difference),
+                                TimeUnit.MILLISECONDS.toMinutes(difference) - TimeUnit.HOURS.toMinutes(
+                                        TimeUnit.MILLISECONDS.toHours(difference)), kalanSaniye);
+
+                        txttimer.setText(kalanZaman);
+                    }
+                    else if (currentHM < ikindiHM) {
+                        long difference = ikindiHM - currentHM;
+
+                        String kalanZaman = String.format(Locale.US,
+                                "%02d:%02d:%02d", TimeUnit.MILLISECONDS.toHours(difference),
+                                TimeUnit.MILLISECONDS.toMinutes(difference) - TimeUnit.HOURS.toMinutes(
+                                        TimeUnit.MILLISECONDS.toHours(difference)), kalanSaniye);
+
+                        txttimer.setText(kalanZaman);
+                    }
+                    else if (currentHM < aksamHM) {
+                        long difference = aksamHM - currentHM;
+
+                        String kalanZaman = String.format(Locale.US,
+                                "%02d:%02d:%02d", TimeUnit.MILLISECONDS.toHours(difference),
+                                TimeUnit.MILLISECONDS.toMinutes(difference) - TimeUnit.HOURS.toMinutes(
+                                        TimeUnit.MILLISECONDS.toHours(difference)), kalanSaniye);
+
+                        txttimer.setText(kalanZaman);
+                    }
+                    else if (currentHM < yatsiHM) {
+                        long difference = yatsiHM - currentHM;
+
+                        String kalanZaman = String.format(Locale.US,
+                                "%02d:%02d:%02d", TimeUnit.MILLISECONDS.toHours(difference),
+                                TimeUnit.MILLISECONDS.toMinutes(difference) - TimeUnit.HOURS.toMinutes(
+                                        TimeUnit.MILLISECONDS.toHours(difference)), kalanSaniye);
+
+                        txttimer.setText(kalanZaman);
+                    } else if (currentHM > yatsiHM) {
+                        long difference = yirmi4sHM - currentHM;
+
+                        long diffs = difference + imsakHM;
+
+                        String kalanZaman = String.format(Locale.US,
+                                "%02d:%02d:%02d", TimeUnit.MILLISECONDS.toHours(diffs),
+                                TimeUnit.MILLISECONDS.toMinutes(diffs) - TimeUnit.HOURS.toMinutes(
+                                        TimeUnit.MILLISECONDS.toHours(diffs)), kalanSaniye);
+
+                        txttimer.setText(kalanZaman);
+                    }
+                }
+            }
+            // When the task is over it will print 00:00:00 there
+            public void onFinish() {
+                txttimer.setText("00:00:00");
+                start();
             }
         }.start();
 

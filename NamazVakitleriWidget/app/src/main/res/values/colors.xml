@@ -16,11 +16,12 @@
     <color name="light_blue_900">#FF01579B</color>
     <color name="gray">#474747</color>
     <color name="green">#69F0AE</color>
-    <color name="activity_bg">#EAF3EF</color>
+    <color name="activity_bg">#EAECF3</color>
     <color name="imsak">#40ACFF</color>
     <color name="gunes">#FFAB40</color>
     <color name="ogle">#FFD740</color>
     <color name="ikindi">#FF6E40</color>
     <color name="aksam">#448AFF</color>
     <color name="yatsi">#041EB8</color>
+
 </resources>

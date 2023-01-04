@@ -50,7 +50,7 @@ public class Ayarlar extends AppCompatActivity {
         lytHadis.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),Ayarlar.class);
+                Intent intent = new Intent(getApplicationContext(),Hadis.class);
                 startActivity(intent);
                 overridePendingTransition(R.anim.anim_left_out_reverse, R.anim.anim_right_in_reverse);
             }
