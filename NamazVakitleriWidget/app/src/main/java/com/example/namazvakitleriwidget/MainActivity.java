@@ -1,10 +1,13 @@
 package com.example.namazvakitleriwidget;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.StrictMode;
@@ -42,13 +45,18 @@ public class MainActivity extends AppCompatActivity {
     public static TextView imsak, gunes, ogle, ikindi, aksam, yatsi, tarih, dua, hadis, ayet;
     Button guncelle, topluvakitler;
     public static String fetchTarih, fetchImsak, fetchGunes, fetchOgle, fetchIkindi, fetchAksam, fetchYatsi, fetchAyinSekliURL;
-    ImageView DimgMoon;
+    ImageView imgImsak,imgGunes,imgOgle,imgIkindi,imgAksam,imgYatsi;
     LinearLayout ltyAyet;
+
+    TextView yaziImsak,yaziGunes,yaziOgle,yaziIkindi,yaziAksam,yaziYatsi;
 
     Timer timer;
     TextView txttimer;
     public static String[] dizi;
     GifImageView imgMoon;
+    private LinearLayout lytImsak, lytGunes, lytOgle, lytIkindi, lytAksam, lytYatsi;
+    private Context context;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -168,8 +176,8 @@ public class MainActivity extends AppCompatActivity {
                     System.out.println("Current hour 24hrs format:  " + hour24hrs + ":" + minutes + ":" + seconds);
                     System.out.println("Current hour 12hrs format:  " + hour12hrs + ":" + minutes + ":" + seconds);
 
-                    //hour24hrs = 8;
-                    //minutes = 3;
+                    //hour24hrs = 17;
+                    //minutes = 48;
 
                     String imsaks[] = imsak.getText().toString().split(":");
                     long imsakH = TimeUnit.HOURS.toMillis(Integer.parseInt(imsaks[0]));
@@ -233,6 +241,10 @@ public class MainActivity extends AppCompatActivity {
                                         TimeUnit.MILLISECONDS.toHours(difference)), kalanSaniye);
 
                         txttimer.setText(kalanZaman);
+                        lytYatsi.setBackgroundResource(R.drawable.yatsi_bg_oval);
+                        imgYatsi.setColorFilter(getResources().getColor(R.color.white));
+                        yaziYatsi.setTextColor(getResources().getColor(R.color.white));
+
                     }
                     else if (currentHM < gunesHM) {
                         long difference = gunesHM - currentHM;
@@ -243,6 +255,9 @@ public class MainActivity extends AppCompatActivity {
                                         TimeUnit.MILLISECONDS.toHours(difference)), kalanSaniye);
 
                         txttimer.setText(kalanZaman);
+                        lytImsak.setBackgroundResource(R.drawable.imsak_bg_oval);
+                        imgImsak.setColorFilter(getResources().getColor(R.color.white));
+                        yaziImsak.setTextColor(getResources().getColor(R.color.white));
                     }
                     else if (currentHM < ogleHM) {
                         long difference = ogleHM - currentHM;
@@ -253,6 +268,10 @@ public class MainActivity extends AppCompatActivity {
                                         TimeUnit.MILLISECONDS.toHours(difference)), kalanSaniye);
 
                         txttimer.setText(kalanZaman);
+                        lytGunes.setBackgroundResource(R.drawable.gunes_bg_oval);
+                        imgGunes.setColorFilter(getResources().getColor(R.color.white));
+                        yaziGunes.setTextColor(getResources().getColor(R.color.white));
+
                     }
                     else if (currentHM < ikindiHM) {
                         long difference = ikindiHM - currentHM;
@@ -263,6 +282,9 @@ public class MainActivity extends AppCompatActivity {
                                         TimeUnit.MILLISECONDS.toHours(difference)), kalanSaniye);
 
                         txttimer.setText(kalanZaman);
+                        lytOgle.setBackgroundResource(R.drawable.ogle_bg_oval);
+                        imgOgle.setColorFilter(getResources().getColor(R.color.white));
+                        yaziOgle.setTextColor(getResources().getColor(R.color.white));
                     }
                     else if (currentHM < aksamHM) {
                         long difference = aksamHM - currentHM;
@@ -273,6 +295,10 @@ public class MainActivity extends AppCompatActivity {
                                         TimeUnit.MILLISECONDS.toHours(difference)), kalanSaniye);
 
                         txttimer.setText(kalanZaman);
+
+                        lytIkindi.setBackgroundResource(R.drawable.ikindi_bg_oval);
+                        imgIkindi.setColorFilter(getResources().getColor(R.color.white));
+                        yaziIkindi.setTextColor(getResources().getColor(R.color.white));
                     }
                     else if (currentHM < yatsiHM) {
                         long difference = yatsiHM - currentHM;
@@ -283,6 +309,9 @@ public class MainActivity extends AppCompatActivity {
                                         TimeUnit.MILLISECONDS.toHours(difference)), kalanSaniye);
 
                         txttimer.setText(kalanZaman);
+                        lytAksam.setBackgroundResource(R.drawable.aksam_bg_oval);
+                        imgAksam.setColorFilter(getResources().getColor(R.color.white));
+                        yaziAksam.setTextColor(getResources().getColor(R.color.white));
                     } else if (currentHM > yatsiHM) {
                         long difference = yirmi4sHM - currentHM;
 
@@ -394,6 +423,28 @@ public class MainActivity extends AppCompatActivity {
         topluvakitler = (Button) findViewById(R.id.topluvakitler);
         tarih = (TextView) findViewById(R.id.txttarih);
         txttimer = (TextView)findViewById(R.id.txttimer);
+
+        yaziImsak = (TextView)findViewById(R.id.yaziImsak);
+        yaziGunes = (TextView)findViewById(R.id.yaziGunes);
+        yaziOgle = (TextView)findViewById(R.id.yaziOgle);
+        yaziIkindi = (TextView)findViewById(R.id.yaziIkindi);
+        yaziAksam = (TextView)findViewById(R.id.yaziAksam);
+        yaziYatsi = (TextView)findViewById(R.id.yaziYatsi);
+
+        lytImsak = (LinearLayout) findViewById(R.id.lytImsak);
+        lytGunes = (LinearLayout) findViewById(R.id.lytGunes);
+        lytOgle = (LinearLayout) findViewById(R.id.lytOgle);
+        lytIkindi = (LinearLayout) findViewById(R.id.lytIkindi);
+        lytAksam = (LinearLayout) findViewById(R.id.lytAksam);
+        lytYatsi = (LinearLayout) findViewById(R.id.lytYatsi);
+
+        imgImsak = (ImageView) findViewById(R.id.imgImsak);
+        imgGunes = (ImageView) findViewById(R.id.imgGunes);
+        imgOgle = (ImageView) findViewById(R.id.imgOgle);
+        imgIkindi = (ImageView) findViewById(R.id.imgIkindi);
+        imgAksam = (ImageView) findViewById(R.id.imgAksam);
+        imgYatsi = (ImageView) findViewById(R.id.imgYatsi);
+
 
 
     }

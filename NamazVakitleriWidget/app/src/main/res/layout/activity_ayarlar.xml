@@ -19,7 +19,7 @@
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/ic_baseline_settings_24"
+                android:src="@drawable/ayarlar_icon_beyaz"
                 android:layout_margin="10dp"/>
             <ImageView
                 android:layout_width="match_parent"
@@ -170,9 +170,9 @@
                 android:background="@drawable/ovalkenar_cizgi"
                 android:padding="5dp">
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_baseline_settings_24"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ayarlar_icon"
                     android:layout_gravity="center"/>
                 <TextView
                     android:layout_width="wrap_content"

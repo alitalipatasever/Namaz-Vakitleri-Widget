@@ -116,7 +116,7 @@ public class FetchData extends AsyncTask<Void,Void,Void> {
         MainActivity.aksam.setText(this.strAksam);
         MainActivity.yatsi.setText(this.strYatsi);
         MainActivity.tarih.setText(this.strTarih);
-        MainActivity.fetchAyinSekliURL.replace("",strAyinSekliURL);
+        //MainActivity.fetchAyinSekliURL.replace("",strAyinSekliURL);
 
         //AllTimes.topluvakitler.setText(dataParsed);
 
